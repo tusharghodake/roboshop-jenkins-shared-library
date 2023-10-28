@@ -1,7 +1,9 @@
 @Library('roboshop')
 
 pipeline{
-    agent any
+    agent{
+        label 'workstation'
+    }
     stages{
 
         stage('compile/build'){
