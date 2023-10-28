@@ -19,11 +19,6 @@ def call() {
                         print "id: ${id}"
                         print "name: ${Name}"
                     }
-                    script {
-
-                        print "name: ${Name}"
-                        print "envvar :${envvar}"
-                    }
                 }
             }
         }
