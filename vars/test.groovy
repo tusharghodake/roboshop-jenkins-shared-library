@@ -27,6 +27,17 @@ def call() {
                     }
                 }
             }
+            stage('Stage2'){
+
+                steps{
+                    script{
+
+                        print "id: ${id}"
+
+                    }
+                }
+
+            }
         }
     }
 }
