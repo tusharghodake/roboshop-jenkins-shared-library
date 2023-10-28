@@ -13,11 +13,17 @@ def call() {
 
                         env.envvar = "environment variable"
 
-                        def id = 10
+                        env.id = 10
                         def Name = "Tushar"
 
                         print "id: ${id}"
                         print "name: ${Name}"
+                    }
+
+                    script{
+
+                        print "id: ${id}"
+
                     }
                 }
             }
