@@ -23,7 +23,6 @@ def unittests(){
             sh "python3 -m unittest"
         }
     }
-}
 
 def email(email_note) {
     mail bcc: '', body: "Job Failed", cc: '', from: 'tushar.d.ghodake@gmail.com', replyTo: '', subject: "Jenkins Job Failed", to: 'tushar.d.ghodake@gmail.com'
