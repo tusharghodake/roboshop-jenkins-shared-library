@@ -8,7 +8,7 @@ def call() {
             }
             stages {
 
-                stage('compile/build') {
+                stage('Compile/Build') {
                     steps {
                         script {
                             common.compile()
