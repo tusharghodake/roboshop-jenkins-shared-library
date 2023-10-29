@@ -14,9 +14,7 @@ pipeline{
 
         stage('Unit Tests'){
             steps{
-                script{
-                    common.compile
-                }
+                echo 'Unit Tests'
             }
         }
 
