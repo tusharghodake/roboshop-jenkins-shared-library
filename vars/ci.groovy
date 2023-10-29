@@ -9,7 +9,7 @@ pipeline{
         stage('compile/build'){
             steps{
                 script{
-                    common.compile
+                    common.compile()
                 }
             }
         }
