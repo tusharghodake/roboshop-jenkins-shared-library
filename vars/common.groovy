@@ -1,10 +1,10 @@
 def compile(){
     if(app_lang == 'nodejs'){
-        sh 'npm install'
+        sh "pm install"
     }
 
     if(app_lang == 'maven'){
-        sh 'mvn package'
+        sh "mvn clean compile package"
     }
 
 }
