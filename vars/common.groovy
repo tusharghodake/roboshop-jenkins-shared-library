@@ -31,5 +31,5 @@ def unittests(){
 }
 
 def email(String mailnote){
-    sh "echo ${mailnote}"
+    println mailnote
 }
