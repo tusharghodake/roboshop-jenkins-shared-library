@@ -8,7 +8,9 @@ pipeline{
 
         stage('compile/build'){
             steps{
-                echo 'compile/build'
+                script{
+                    common.compile
+                }
             }
         }
 
