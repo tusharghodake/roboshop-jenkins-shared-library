@@ -12,12 +12,7 @@ def compile(){
 def unittests(){
     if(app_lang == 'nodejs') {
         //Developer is missing test cases in our project, He need to add then as a best practice, we are skipping to proceed further
-        try {
             sh "npm test"
-        } catch (Exception e) {
-
-            email("Unit test failed")
-
         }
 
         if (app_lang == 'maven') {
@@ -30,6 +25,6 @@ def unittests(){
     }
 }
 
-def email(String mailnote){
-    println mailnote
+def email(email_note) {
+    mail bcc: '', body: "Job Failed", cc: '', from: 'tushar.d.ghodake@gmail.com', replyTo: '', subject: "Jenkins Job Failed", to: 'tushar.d.ghodake@gmail.com'
 }
