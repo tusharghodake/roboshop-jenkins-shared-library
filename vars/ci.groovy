@@ -4,7 +4,7 @@ def call() {
         node('workstation2'){
             stage('Checkout'){
                 cleanWs()
-                git branch: 'main', url: 'https://github.com/tusharghodake/${component}.git'
+                git branch: 'main', url: "https://github.com/tusharghodake/${component}.git"
             }
             stage('Compile/Build'){
                 common.compile()
