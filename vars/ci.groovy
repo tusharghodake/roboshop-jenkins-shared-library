@@ -2,11 +2,12 @@ def call() {
 
     try {
         node('workstation2'){
+            stage('Checkout'){
+                cleanWs()
+                git branch: 'main', url: 'https://github.com/tusharghodake/cart.git'
+            }
             stage('Compile/Build'){
                 common.compile()
-            }
-            stage('Clean'){
-                cleanWs()
             }
             stage('Unit Tests'){
                 common.unittests()
