@@ -4,6 +4,12 @@ def call() {
         env.SONAR_EXTRA_OPTS = " "
     }
 
+    if(!env.TAG_NAME) {
+        env.PUSH_CODE = "false"
+    }else {
+        env.PUSH_CODE = "true"
+    }
+
     try {
         node('workstation2'){
             stage('Checkout'){
@@ -25,8 +31,11 @@ def call() {
                     sh 'echo sonar scan'
                 }
             }
-            stage('Upload Code to centralized place'){
-                echo 'Upload'
+            if(env.PUSH_CODE == "true") {
+                stage('Upload Code to Centralized Place') {
+                    print 'Upload'
+//                    common.artifactPush()
+                }
             }
         }
 
