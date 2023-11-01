@@ -15,7 +15,7 @@ def call() {
             stage('Checkout'){
                 cleanWs()
                 git branch: 'main', url: "https://github.com/tusharghodake/${component}.git"
-                sh 'env'
+//                sh 'env'
             }
             stage('Compile/Build'){
                 common.compile()
